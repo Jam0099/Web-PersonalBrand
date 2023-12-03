@@ -8,7 +8,9 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     font-family: Satoshi;
+    list-style: none;
     text-decoration: none;
 }
 
@@ -28,10 +30,6 @@ input:-webkit-autofill:active {
     background-color: #F0ECE5;
     width: auto;
     height: auto;
-    display: grid;
-    grid:
-        "header header header" 64.8px "leftSide body rightSide" auto "footer footer footer" auto / 10% 1fr 10%;
-    gap: 10px 0px;
 }
 
 .logo {
@@ -44,7 +42,6 @@ input:-webkit-autofill:active {
     height: 100%;
     display: flex;
     gap: 50px;
-    list-style: none;
     font-size: 16px;
 }
 
@@ -80,23 +77,102 @@ li a:hover:after {
     background-color: #31304D;
 }
 
-.leftSide {
-    grid-area: leftSide;
+.slider {
+    position: static;
+    width: 1000px;
+    height: auto;
+    overflow: hidden;
 }
 
-.body {
-    grid-area: body;
+.slider ul {
+    display: flex;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out;
 }
 
-.rightSide {
-    grid-area: rightSide;
+.slider li {
+    position: relative;
+    width: 100%;
+}
+
+.slider li div {
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    font-size: 60px;
+}
+
+@keyframes slide {
+    0% {
+        margin-left: 0;
+    }
+
+    20% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
+}
+
+#text01 {
+    top: 12%;
+    left: 48%;
+    color: #31304D;
+}
+
+#text02 {
+    top: 15%;
+    left: 50%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%);
+    color: #F0ECE5;
+}
+
+#text03 {
+    top: 15%;
+    left: 55%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #F0ECE5;
+}
+
+#text04 {
+    top: 5%;
+    left: 5%;
+    color: #3a3a3a;
+}
+
+.slider img {
+    width: 100%;
 }
 
 .footer {
     display: flex;
     flex-direction: row;
     gap: 50px;
-    margin-top: 30px;
     padding: 30px 150px;
     background-color: #31304D;
     grid-area: footer;
@@ -154,7 +230,7 @@ li a:hover:after {
     top: -10px;
     left: 10px;
     background-color: #31304D;
-    transition: all .5s ease;
+    transition: all .2s ease;
 }
 
 .form .group input,
@@ -211,7 +287,7 @@ li a:hover:after {
 .footer button:hover {
     background-color: #161A30;
     color: #fff;
-    transform: translateY(-4px);
+    transform: translateY(-6px);
 }
 
 .footer button:active {
