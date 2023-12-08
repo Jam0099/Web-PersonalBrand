@@ -77,17 +77,30 @@ li a:hover:after {
     background-color: #31304D;
 }
 
+.body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #161A30;
+}
+
 .slider {
     position: static;
     width: 1000px;
     height: auto;
     overflow: hidden;
+    text-align: center;
+    position: relative;
+    margin: 0;
 }
 
 .slider ul {
     display: flex;
     width: 400%;
     animation: slide 20s infinite alternate ease-in-out;
+    margin: 0;
 }
 
 .slider li {
